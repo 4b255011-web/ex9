@@ -7,10 +7,12 @@ button,input,select,textarea,optgroup{font:inherit;margin:0}
 textarea{overflow:auto}
 :root{
 color-scheme:light;
---w3-font-family:Verdana,Arial,sans-serif;
---w3-heading-font-family:"Segoe UI",Arial,sans-serif;
---w3-font-size:15px;
---w3-line-height:1.5;
+/* 【修改1】更改全站與標題預設字型為微軟正黑體，並加大字體與行高 */
+--w3-font-family:"Microsoft JhengHei",Verdana,Arial,sans-serif;
+--w3-heading-font-family:"Microsoft JhengHei","Segoe UI",Arial,sans-serif;
+--w3-font-size:16px;
+--w3-line-height:1.8;
+
 --w3-content-max-width:980px;
 --w3-page-bg:#fff;
 --w3-text-color:#000;
@@ -64,7 +66,8 @@ html{color:var(--w3-text-color)}
 html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
 .w3-serif{font-family:serif}.w3-sans-serif{font-family:sans-serif}.w3-cursive{font-family:cursive}.w3-monospace{font-family:monospace}
-h1,h2,h3,h4,h5,h6{font-family:var(--w3-heading-font-family);font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
+/* 【修改2】將標題改為粗體(700)並增加字距(3px) */
+h1,h2,h3,h4,h5,h6{font-family:var(--w3-heading-font-family);font-weight:700;letter-spacing:3px;margin:10px 0}.w3-wide{letter-spacing:4px}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
 sub{bottom:-0.25em}
 sup{top:-0.5em}
@@ -244,7 +247,8 @@ border-collapse:collapse;border-spacing:0;width:100%;display:table}
 .w3-aqua,.w3-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
 .w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
 .w3-light-blue,.w3-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
-.w3-brown,.w3-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+/* 【修改3】將深棕色調整為莫蘭迪粉棕色（套用於聯絡資訊區塊） */
+.w3-brown,.w3-hover-brown:hover{color:#fff!important;background-color:#b48a7e!important}
 .w3-cyan,.w3-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
 .w3-blue-grey,.w3-hover-blue-grey:hover,.w3-blue-gray,.w3-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
 .w3-green,.w3-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
@@ -258,11 +262,13 @@ border-collapse:collapse;border-spacing:0;width:100%;display:table}
 .w3-purple,.w3-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
 .w3-deep-purple,.w3-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
 .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
-.w3-sand,.w3-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+/* 【修改4】將沙色調整為設計稿米色背景與深咖啡文字（套用於關於我區塊） */
+.w3-sand,.w3-hover-sand:hover{color:#5a4a42!important;background-color:#efeae2!important}
 .w3-teal,.w3-hover-teal:hover{color:#fff!important;background-color:#009688!important}
 .w3-yellow,.w3-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
 .w3-white,.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
-.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+/* 【修改5】將純黑色改為莫蘭迪深咖啡色（套用於頂部導覽列與按鈕） */
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#5a4a42!important}
 .w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
 .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
 .w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
@@ -337,39 +343,3 @@ border-collapse:collapse;border-spacing:0;width:100%;display:table}
 .w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
-/* =========================================================
-   作業九 ex9.css 修改五處紀錄（覆蓋上方 w3.css 原始設定）
-   ========================================================= */
-
-/* 修改處 1：更改全站預設字型為微軟正黑體、加大字體與行高、開啟平滑捲動 */
-html, body {
-  font-family: "Microsoft JhengHei", Verdana, sans-serif !important;
-  font-size: 16px !important;
-  line-height: 1.8 !important;
-  scroll-behavior: smooth;
-}
-
-/* 修改處 2：更改標題字型為黑體、加粗並增加字距 */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Microsoft JhengHei", sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px !important;
-}
-
-/* 修改處 3：修改 .w3-black 背景色（頂部導覽列改為莫蘭迪深咖啡色） */
-.w3-black, .w3-hover-black:hover {
-  color: #ffffff !important;
-  background-color: #5a4a42 !important;
-}
-
-/* 修改處 4：修改 .w3-sand 背景色（關於我區塊改為米色背景與深咖啡文字） */
-.w3-sand, .w3-hover-sand:hover {
-  color: #5a4a42 !important;
-  background-color: #efeae2 !important;
-}
-
-/* 修改處 5：修改 .w3-brown 背景色（聯絡資訊區塊改為莫蘭迪粉棕色） */
-.w3-brown, .w3-hover-brown:hover {
-  color: #ffffff !important;
-  background-color: #b48a7e !important;
-}

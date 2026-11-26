@@ -3,98 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <title>作業九_4b255011</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- 連結修改過的外部樣式表 ex9.css -->
   <link rel="stylesheet" href="ex9.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body id="home" class="w3-content" style="max-width:1200px">
+<body id="home" class="w3-content">
 
+<!-- 1. Navigation 導覽列（保留原範本結構，套用 ex9.css 修改處 3：.w3-black） -->
+<div class="w3-top w3-bar w3-black">
+  <a href="#home" class="w3-bar-item w3-button">首頁</a>
+  <a href="#about" class="w3-bar-item w3-button">關於我</a>
+  <a href="#members" class="w3-bar-item w3-button">作品</a>
+  <a href="#contact" class="w3-bar-item w3-button">聯絡資訊</a>
+</div>
 
-  <div class="w3-top w3-bar w3-black">
-    <a href="#home" class="w3-bar-item w3-button">首頁</a>
-    <a href="#about" class="w3-bar-item w3-button">關於我</a>
-    <a href="#portfolio" class="w3-bar-item w3-button">作品</a>
-    <a href="#contact" class="w3-bar-item w3-button">聯絡資訊</a>
+<!-- 2. Slides 輪播區（保留原範本 w3.slideshow 結構，換成你的照片） -->
+<img class="slides" src="images/1.jpg" width="100%" alt="安平街景">
+<img class="slides" src="images/about_photo.jpg" width="100%" alt="合照">
+
+<script>
+w3.slideshow(".slides", 2000);
+</script>
+
+<!-- 3. About 關於我（保留原範本單欄置中結構，套用 ex9.css 修改處 4：.w3-sand） -->
+<section id="about" class="w3-container w3-padding-32 w3-sand">
+
+  <h1 class="w3-center">關於我</h1>
+  <p class="w3-center">
+    哈嘍～我叫<b>張絮童</b>（學號：4B255011）。<br>
+    我的興趣愛好就是逛街買衣服，還很喜歡做美甲！
+  </p>
+
+</section>
+
+<!-- 4. Members 作品展示區（保留原範本三欄式 w3-grid 結構，換成你的三張作品） -->
+<section id="members" class="w3-container w3-padding-32">
+
+  <h2 class="w3-center">
+    <a href="#members" style="text-decoration:none;">作品</a>
+  </h2>
+
+  <div class="w3-grid w3-center" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+
+    <div>
+      <img src="images/work1.jpg" alt="作品一" style="width:60%">
+      <p>攝影作品 01</p>
+    </div>
+
+    <div>
+      <img src="images/work2.jpg" alt="作品二" style="width:60%">
+      <p>攝影作品 02</p>
+    </div>
+
+    <div>
+      <img src="images/work3.jpg" alt="作品三" style="width:60%">
+      <p>設計作品 03</p>
+    </div>
+
   </div>
 
-  <div style="margin-top:40px">
-    <img src="images/1.jpg" alt="安平" style="width:100%; display:block;">
-  </div>
+</section>
 
-  <section id="about" class="w3-row w3-sand" style="display:flex; flex-wrap:wrap; align-items:stretch;">
- 
-    <div class="w3-col m6 w3-container w3-padding-64 w3-center" style="display:flex; flex-direction:column; justify-content:center;">
-      <h1 style="margin-bottom: 24px;">關於我</h1>
-      <p class="w3-large">
-        哈嘍～<br>
-        我叫<b>張絮童</b><br>
-        我的興趣愛好就是逛街買衣服<br>
-        還很喜歡做美甲
-      </p>
-      <p class="w3-small w3-opacity" style="margin-top: 32px;">點擊右側照片查看更多</p>
-    </div>
+<!-- 5. Contact 聯絡資訊區（保留原範本聯絡資訊、表單與底部大圖結構，套用 ex9.css 修改處 5：.w3-brown） -->
+<section id="contact" class="w3-container w3-center w3-padding-32 w3-brown">
 
-  
-    <div class="w3-col m6" style="padding:0;">
-      <a href="https://4b255011-web.github.io/ex2/aboutme.html" title="點擊查看更多作品" style="display:block; height:100%; overflow:hidden;">
-        <img src="images/about_photo.jpg" alt="張絮童合照" class="w3-hover-opacity" style="width:100%; height:100%; object-fit:cover; display:block; transition:0.3s;">
-      </a>
-    </div>
-  </section>
+  <h2 class="w3-wide">CONTACT</h2>
+  <p>Taiwan, Tainan</p>
+  <p>學號：4B255011</p>
+  <p>姓名：張絮童</p>
 
- 
-  <section id="portfolio" class="w3-container w3-grey w3-padding-64">
-   
-    <h2 style="border-bottom: 3px solid #ffffff; display:inline-block; padding-bottom:4px; margin-bottom:32px; margin-left:16px;">
-      <a href="https://4b255011-web.github.io/ex2/album.html" class="w3-text-white w3-hover-opacity" style="text-decoration:none;" title="作品集連結">作品</a>
-    </h2>
+  <p class="w3-opacity"><i>歡迎留言給我！</i></p>
 
-    <div class="w3-row-padding">
-  
-      <div class="w3-third w3-margin-bottom">
-        <div class="w3-white w3-card-4" style="padding:12px 12px 36px 12px;">
-          <img src="images/work1.jpg" alt="香水靜物攝影" style="width:100%; aspect-ratio:3/4; object-fit:cover;">
-        </div>
-      </div>
+  <form action="/action_page.php" target="_blank">
+    <input class="w3-input" type="text" placeholder="姓名" required name="Name">
+    <input class="w3-input" type="email" placeholder="Email" required name="Email">
+    <input class="w3-input" type="text" placeholder="留言內容" required name="Message">
+    <p>
+      <button class="w3-button w3-black" type="submit">送出</button>
+    </p>
+  </form>
 
-     
-      <div class="w3-third w3-margin-bottom">
-        <div class="w3-white w3-card-4" style="padding:12px 12px 36px 12px;">
-          <img src="images/work2.jpg" alt="紅磚牆與新芽" style="width:100%; aspect-ratio:3/4; object-fit:cover;">
-        </div>
-      </div>
+  <!-- 原範本 map.jpg 位置換成你的海邊背影照或 QR Code -->
+  <img src="images/contact_photo.jpg" alt="海邊背影" style="width:100%">
+  <p class="w3-center w3-padding">©2026 4B255011 張絮童 | Powered by <title="ex9.CSS" target="_blank">ex9.css</a></p>
 
-     
-      <div class="w3-third w3-margin-bottom">
-        <div class="w3-white w3-card-4" style="padding:12px 12px 36px 12px;">
-          <img src="images/work3.jpg" alt="證件照排版作品" style="width:100%; aspect-ratio:3/4; object-fit:cover;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <footer id="contact" class="w3-row w3-brown" style="display:flex; flex-wrap:wrap; align-items:stretch;">
-    
-    <div class="w3-col m6" style="padding:0;">
-      <img src="images/contact_photo.jpg" alt="海邊背影" style="width:100%; height:100%; object-fit:cover; display:block;">
-    </div>
-
-  
-    <div class="w3-col m6 w3-container w3-padding-64 w3-center" style="display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative;">
-      <div class="w3-white w3-padding" style="border-radius:4px; margin-bottom:24px;">
-        <img src="images/qrcode.png" alt="Instagram QR Code" style="width:180px; height:180px; display:block;">
-      </div>
-      
-      <p class="w3-xlarge" style="letter-spacing:2px; margin:0;">
-        📷 4B255011 張絮童
-      </p>
-
-      <div style="position:absolute; bottom:16px; right:24px;" class="w3-small">
-        ©2026
-      </div>
-    </div>
-  </footer>
+</section>
 
 </body>
 </html>
